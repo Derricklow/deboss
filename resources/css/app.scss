@@ -1,0 +1,30 @@
+@import "~bootstrap/scss/bootstrap";
+@import 'bootstrap-vue/dist/bootstrap-vue.css';
+@import "~@fortawesome/fontawesome-pro/css/all.min.css";
+
+.logo {
+	width: 80px;
+	height: 80px;
+	border-radius: 100%;
+	object-fit: contain;
+	object-position: center;
+}
+
+.logo-wrapper:hover {
+	transition: color .25s ease-in-out;
+	color: #605DBA;
+
+	.logo {
+		filter: saturate(50%);
+	}
+}
+
+.title{
+	letter-spacing: 2px;
+	font-weight: 700;
+	font-size: 1.1rem;
+}
+
+.pointer{
+	cursor: pointer;
+}

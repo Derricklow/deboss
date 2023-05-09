@@ -1,0 +1,30 @@
+<?php
+
+namespace App\Http\Controllers\Auth;
+
+use App\Http\Controllers\Controller;
+use App\Providers\RouteServiceProvider;
+
+use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Foundation\Auth\ThrottlesLogins;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Http\Request;
+use Inertia\Inertia;
+use App\Models\Admin;
+use Str;
+use Cookie;
+
+class LoginController extends Controller
+{
+	use ThrottlesLogins;
+
+	public function __construct()
+	{
+		Auth::shouldUse('admin');
+	}
+
+	public function showLoginForm()
+    {
+        return Inertia::render('Login/Index');
+    }
+}
